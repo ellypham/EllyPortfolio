@@ -23,9 +23,9 @@
 
 	<section class="marketingServices">
 		<h2>Services</h2>
-		<div class="images">
+		<div class="mktgServices">
 		  <?php while( has_sub_field('services') ): ?>
-		    <div class="iconBlurb">
+		    <div class="mktgServicesBlurb">
 		      <p><?php the_sub_field('icon_blurb'); ?></p>
 		      <img src="<?php the_sub_field('icon_image'); ?>">
 		    </div>
@@ -35,12 +35,24 @@
   
 
 <!-- //marketing skills -->
-<section class="marketingServices">
+<section class="marketingSkills">
 	<h2>Marketing Skills</h2>
-	<div class="images">
+	<div class="mktSkills">
 	  <?php while( has_sub_field('marketing_skills') ): ?>
-	    <div class="iconBlurb">
+	    <div class="mktSkillsBlurb">
 	      <p><?php the_sub_field('market_skills'); ?></p>
+	    </div>
+	  <?php endwhile; ?>
+	</div>
+</section>
+
+<!-- //technical skills -->
+<section class="technicalSkills">
+	<h2>Technical Skills</h2>
+	<div class="techSkills">
+	  <?php while( has_sub_field('technical_skills') ): ?>
+	    <div class="techSkillsBlurb">
+	      <p><?php the_sub_field('tech_skills'); ?></p>
 	    </div>
 	  <?php endwhile; ?>
 	</div>
