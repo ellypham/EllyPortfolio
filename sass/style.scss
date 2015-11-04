@@ -34,8 +34,14 @@ body {
 
 .content {
 	float: left;
-	width: 65%;
-	margin-right: 5%;
+	width: 100%;
+	padding-top: 5%;
+	padding-bottom: 5%;
+}
+
+.content p{
+	margin-top: 10%;
+	margin-bottom: 10%;
 }
 
 .full {

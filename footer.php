@@ -1,6 +1,8 @@
 <footer>
   <div class="container">
-    <p>&copy; HackerYou <?php echo date('Y'); ?></p>
+  	<div class="footerLogo"><p>ELLY PHAM LOGO</p></div>
+  	<div class="socialMediaIcons"></div>
+    <p>&copy; Made with by Elly Pham. All rights reserved. <?php echo date('2015'); ?></p>
   </div>
 </footer>
 
