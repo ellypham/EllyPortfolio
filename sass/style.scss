@@ -13,43 +13,160 @@
 @import 'sidebar';
 @import 'comments';
 @import 'footer';
-/*
-====================================
-Default Styling
-====================================
-*/
 
-img {
-	max-width: 100%;
+// ====================================
+// Default Styling
+// ====================================
+
+
+//FONTSTYLES
+$titleFont: 'Noto Sans', sans-serif;
+$bodyFont: 'Roboto Slab', serif;
+
+// COLORS
+
+$lightblue: #D7EDF0;
+$grey: #8D8989;
+$textcolor: rgb(137, 192, 207);
+$darkblue: rgb(74, 137, 158);
+$pink: rgb(255,192,203);
+
+//COMMON STYLES
+
+
+@mixin fontSize($scale) {
+		font-size: $scale * 1px;
+		font-size: ($scale / 10) * 1rem;
 }
 
-body {
-	color: #333;
+body{
+	font-family: $bodyFont;
+	color: $grey;
+	font-weight: 400;
+	@include fontSize(12);
+	text-align: center;
 }
 
-.container {
-	max-width: 1200px;
-	margin: 0 auto;
+header{
+	padding: 0;
+}
+
+// img {
+// 	max-width: 100%;
+// }
+
+h1{
+	color: black;
+}
+
+
+// .container {
+// 	max-width: 100%;
+// 	margin: 0 auto;
+// 	margin:0;
+// 	padding: 0;
+// }
+
+//header section
+
+.ellyLogo h1{
+	margin: 0;
+}
+
+.ellyLogo{
+	margin-top: 2%;
+}
+
+nav{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.nav ul{
+	padding-top: 10%;
+	padding-left: 400px;
+
+	
+}
+
+// .nav{
+// 	padding-left: 55%;
+// 	padding-top: 0;
+// }
+
+.container h1{
+	padding-top: 5px;
 }
 
 .content {
-	float: left;
 	width: 100%;
-	padding-top: 5%;
-	padding-bottom: 5%;
+	padding-bottom: 10%;
+	background: url(images/header_bg_03.png) center;
+	height: 80vh;
+	background-size: cover;
+
 }
 
 .content p{
-	margin-top: 10%;
-	margin-bottom: 10%;
+	margin-top: 5%;
 }
+
+//about me
+
+.aboutMe{
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	padding-bottom: 5%;
+}
+
+.ellyImage{
+	width: 30%;
+}
+
+.aboutMe p{
+	width: 65%;
+}
+
+h2.ellyAbout{
+	margin-top: 30px;
+}
+
+//services
+.servicesContainer{
+	width: 100%;
+	padding-bottom: 1%;
+	padding-top: 5%;
+	background: url(images/lines.png) center;
+	height: 60vh;
+	background-size: cover;
+}
+
+.marketingServices{
+	width: 80%;
+	margin: 0 auto;
+}
+
+.mktgServices{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+}
+	
+.mktgServicesBlurb{
+	padding: 2%;
+}
+
+.mktgServicesBlurb img{
+	height: 60px;
+	width: 60px;
+}
+
 
 .full {
 	width: 100%;
 }
-
-
-
 
 
 
