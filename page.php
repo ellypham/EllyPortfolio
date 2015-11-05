@@ -14,17 +14,19 @@
 
 
 <!-- //About Me Section -->
+<div class="aboutContainer" id="about">
 	<h2 class="ellyAbout">About Me</h2>
-	<section class="aboutMe" id="about">
+	<section class="aboutMe">
 		<div class="ellyImage">
 		<?php the_post_thumbnail(medium); ?>
 		</div>
 		<p><?php the_field('biography'); ?></p>
 	</section>
+</div>
 
 <!-- //services -->
 
-<div class="servicesContainer">
+<div class="servicesContainer" id="services">
 	<h2>Services</h2>
 	<section class="marketingServices">
 		<div class="mktgServices">
@@ -41,7 +43,7 @@
 
 <!-- //marketing skills -->
 <section class="marketingSkills">
-	<h2>Marketing Skills</h2>
+	<h2>Skills</h2>
 	<div class="mktSkills">
 	  <?php while( has_sub_field('marketing_skills') ): ?>
 	    <div class="mktSkillsBlurb">
@@ -56,16 +58,17 @@
 	<h2>Technical Skills</h2>
 	<div class="techSkills">
 	  <?php while( has_sub_field('technical_skills') ): ?>
-	    <div class="techSkillsBlurb">
-	      <p><?php the_sub_field('tech_skills'); ?></p>
+	    <div class="techSkillsIcon">
+	      <img src="<?php the_sub_field('tech_image'); ?>">
 	    </div>
 	  <?php endwhile; ?>
 	</div>
 </section>
 
 <!-- //featured work -->
-<h2>Featured Work</h2>
 
+<section class='portfolio' id="portfolio">
+<h2>Featured Work</h2>
     <?php $portfolioQuery = new WP_query(
       array(
         'post_type'=>'portfolio',
@@ -77,17 +80,18 @@
     <?php if($portfolioQuery->have_posts()): ?>
       <?php while($portfolioQuery->have_posts()): $portfolioQuery->the_post(); ?>
         <!-- //stuff goes here -->
-        <div class ="featured">
-        <?php the_title(); ?>
-        <?php the_post_thumbnail(); ?>
-        <p><?php the_field(portfolio_short_description) ?></p>
+        <div class ="portfolioPieces">
+        	<div class="portfolioImg"><?php the_post_thumbnail(); ?></div>
+        	
+        	
 
-        <div> 
+        </div> 
 
 
       <?php endwhile ?>
       <?php wp_reset_postdata(); ?>
     <?php endif; ?>
+</section>
 
  <!-- //why choose me -->
 

@@ -104,7 +104,6 @@ nav{
 	background: url(images/header_bg_03.png) center;
 	height: 80vh;
 	background-size: cover;
-
 }
 
 .content p{
@@ -112,6 +111,13 @@ nav{
 }
 
 //about me
+
+.aboutContainer{
+	width: 100%;
+	padding-bottom: 1%;
+	padding-top: 5%;
+	height: 60vh;
+}
 
 .aboutMe{
 	display: flex;
@@ -137,7 +143,7 @@ h2.ellyAbout{
 	width: 100%;
 	padding-bottom: 1%;
 	padding-top: 5%;
-	background: url(images/lines.png) center;
+	background: url(images/service_bg.png) center;
 	height: 60vh;
 	background-size: cover;
 }
@@ -162,6 +168,95 @@ h2.ellyAbout{
 	height: 60px;
 	width: 60px;
 }
+
+
+//marketing skills
+
+.marketingKills{
+	width: 100%;
+	background: white;
+	height: 60vh;
+}
+
+.mktSkills{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	max-width: 60%;
+	margin: 0 auto;
+}
+
+.mktSkillsBlurb p{
+	border: 3px solid $lightblue;
+}
+
+
+//technical skills
+
+.technicalSkills{
+	width: 100%;
+	background: white;
+	height: 20vh;
+}
+
+.techSkills{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	max-width: 60%;
+	margin: 0 auto;
+}
+
+//featured work
+
+.portfolio{
+	width: 100%;
+}
+
+.portfolioPieces{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+}
+
+//why choose me
+
+//blog section
+
+.blog{
+	width: 90%;
+}
+
+.blog img{
+	height: 280px;
+	width: 300px;
+}
+
+.postBlogs{
+	display: flex;
+	flex-wrap: wrap;
+	width: 20%;
+}
+
+//contact form
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 .full {
