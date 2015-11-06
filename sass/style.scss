@@ -27,6 +27,7 @@ $bodyFont: 'Roboto Slab', serif;
 
 $lightblue: rgb(215,237,240);
 $grey: #8D8989;
+$yellow: #FFF794;
 $textcolor: rgb(137, 192, 207);
 $darkblue: rgb(74, 137, 158);
 $pink: rgb(255,192,203);
@@ -105,32 +106,23 @@ nav{
 	// padding-left: 400px;
 }
 
+.nav li{
+	display: inline-block
+}
+
+nav li a:hover{
+	background: $yellow;
+	text-decoration: underline;
+}
+
 // .nav{
 // 	padding-left: 55%;
 // 	padding-top: 0;
 // }
 
 .container h1{
-	padding-top: 5px;
+	padding-top: 20px;
 }	
-
-// .content {
-// 	width: 100%;
-// 	padding-bottom: 10%;
-// 	background: url(images/header_bg_03.png) center;
-// 	height: 80vh;
-// 	background-size: cover;
-// }
-
-// .content{
-// 	width: 100%;
-// 	padding-bottom: 10%;
-//   	background-image: url(images/header_bg_03.png), url(images/portfolioHeaderImage4.jpeg);
-//   	background: 
-//   	background-blend-mode: multiply;
-//   	height: 80vh;
-//   	background-size: cover;
-// }
 
 .content{
 	width: 100%;
@@ -142,18 +134,30 @@ nav{
   	background-size: cover;
 }
 
-// .content{
-// 	width: 100%;
-// 	padding-bottom: 10%;
-//   	background-image: url(images/header_bg_03.png), url(images/portfolioHeaderImageCar.jpeg);
-//   	// background-color: $lightblue;
-//   	background-blend-mode: lighten;
-//   	height: 80vh;
-//   	background-size: cover;
-// }
+.content h1{
+	padding-top: 6%;
+	font-weight: 700;
+	font-family: $bodyFont;
+	font-size: 4rem;
+	color: black;
 
-.content p{
-	margin-top: 5%;
+}
+
+.content ul.titleBio{
+	font-weight: 500;
+	font-family: $titleFont; 
+	font-size: 2rem;
+	color: $grey;
+	// list-style: none;
+
+}
+
+ul.titleBio{
+	text-align: left;
+	max-width: 50%;
+	margin: 0 auto;
+	margin-right: 5%;
+
 }
 
 //about me
@@ -297,6 +301,7 @@ h2.ellyAbout{
 .portItems{
 	padding: 2%;
 	width: 33%;
+	position: relative;
 }
 
 .portItems img{
@@ -304,17 +309,29 @@ h2.ellyAbout{
 	width: 400px;
 }
 
+.portItems h3{
+	position: absolute;
+	top: 20%;
+	left:40%;
+	color: white;
+	text-transform: uppercase;
+}
+
+
 
 //blog section
 
 .blog{
-	width: 80%;
+	margin: 0;
+	padding: 0;
+	width: 70%;
 	margin: 0 auto;
 }
 
 .blog img{
 	height: 260px;
 	width: 300px;
+	border: 10px solid rgba(139,139,139,0.7);
 }
 
 .posts{
@@ -323,6 +340,7 @@ h2.ellyAbout{
 	justify-content: space-between;
 	align-items: center;
 }
+
 
 //contact form
 

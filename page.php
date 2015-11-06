@@ -7,9 +7,13 @@
     <?php get_header();  ?>
       <?php // Start the loop ?>
       <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-
+     <h1>I Am Elly Pham...</h1>
+     <ul class="titleBio">
+     	<li>Front-End Developer</li>
+     	<li>Digital Marketer</li>
+     	<li>Philanthropist</li>
+     </ul>
      
-      <?php the_content(); ?>
     </div> <!-- /,content -->
 
 
@@ -77,7 +81,7 @@
 		<div class="portfolioItems">
 		  <?php while( has_sub_field('portfolio_items') ): ?>
 		    <div class="portItems">
-		      <p><?php the_sub_field('portfolio_title'); ?></p>
+		      <h3><?php the_sub_field('portfolio_title'); ?></h3>
 		      <img src="<?php the_sub_field('portfolio_image'); ?>">
 
 		    </div>
