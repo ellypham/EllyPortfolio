@@ -1,7 +1,16 @@
 <footer>
   <div class="container">
-  	<div class="footerLogo"><p>ELLY PHAM LOGO</p></div>
-  	<div class="socialMediaIcons"></div>
+  	<div class="footerLogo">
+  		<img src="<?php bloginfo('template_url') ?>/images/elly_logo_noBG2.png" alt="shape logo">
+  	</div>
+  	<div class="footerCopy">
+  		<p>50% of funds from services will be donated to the 100 Smiles Project, a non-for profit organization which helps orphanages in Central America.  100% of these donated funds will go directly to the proejcts.</p>
+  	<div class="socialMediaIcons">
+  		<p>Facebook</p>
+  		<p>Github</p>
+  		<p>Twitter</p>
+  		<p>email</p>
+  	</div>
     <p>&copy; Made with by Elly Pham. All rights reserved. <?php echo date('2015'); ?></p>
   </div>
 </footer>

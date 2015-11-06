@@ -20,8 +20,7 @@
 
 <nav>
   <div class="ellyLogo">  
-    <img src="<?php bloginfo('template_url') ?>/images/shape2.png" alt="shape logo">
-    <h1>ellypham</h1>
+    <img src="<?php bloginfo('template_url') ?>/images/elly_logo_noBG2.png" alt="shape logo">
   </div>
   <div class="nav">
     <?php wp_nav_menu( array(

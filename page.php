@@ -14,21 +14,22 @@
 
 
 <!-- //About Me Section -->
-<div class="aboutContainer" id="about">
+<section class="aboutContainer" id="about">
+	<div class="imgBackground"></div>
 	<h2 class="ellyAbout">About Me</h2>
-	<section class="aboutMe">
+	<div class="aboutMe">
 		<div class="ellyImage">
 		<?php the_post_thumbnail(medium); ?>
 		</div>
 		<p><?php the_field('biography'); ?></p>
-	</section>
-</div>
+	</div>
+</section>
 
 <!-- //services -->
 
-<div class="servicesContainer" id="services">
+<section class="servicesContainer" id="services">
 	<h2>Services</h2>
-	<section class="marketingServices">
+	<div class="marketingServices">
 		<div class="mktgServices">
 		  <?php while( has_sub_field('services') ): ?>
 		    <div class="mktgServicesBlurb">
@@ -37,8 +38,8 @@
 		    </div>
 		  <?php endwhile; ?>
 		</div>
-	</section>
-</div>
+	</div>
+</section>
   
 
 <!-- //marketing skills -->
@@ -55,7 +56,7 @@
 
 <!-- //technical skills -->
 <section class="technicalSkills">
-	<h2>Technical Skills</h2>
+	<!-- <h2>Technical Skills</h2> -->
 	<div class="techSkills">
 	  <?php while( has_sub_field('technical_skills') ): ?>
 	    <div class="techSkillsIcon">
@@ -65,66 +66,43 @@
 	</div>
 </section>
 
-<!-- //featured work -->
+<!-- //Portfolio Featured Work -->
 
-<section class='portfolio' id="portfolio">
-<h2>Featured Work</h2>
-    <?php $portfolioQuery = new WP_query(
-      array(
-        'post_type'=>'portfolio',
-        'orderby'=>'title',
-        'order'=>'DESC'
-        )
-    ); ?>
+<section class="portfolioContainer" id="services">
+	<h2>Portfolio</h2>
+	<div class="portfolio">
+		<div class="portfolioItems">
+		  <?php while( has_sub_field('portfolio_items') ): ?>
+		    <div class="portItems">
+		      <p><?php the_sub_field('portfolio_title'); ?></p>
+		      <img src="<?php the_sub_field('portfolio_image'); ?>">
 
-    <?php if($portfolioQuery->have_posts()): ?>
-      <?php while($portfolioQuery->have_posts()): $portfolioQuery->the_post(); ?>
-        <!-- //stuff goes here -->
-        <div class ="portfolioPieces">
-        	<div class="portfolioImg"><?php the_post_thumbnail(); ?></div>
-        	
-        	
-
-        </div> 
-
-
-      <?php endwhile ?>
-      <?php wp_reset_postdata(); ?>
-    <?php endif; ?>
+		    </div>
+		  <?php endwhile; ?>
+		</div>
+	</div>
 </section>
 
- <!-- //why choose me -->
-
-	<section class="whyChooseMe">
-		<h2>Why Choose Me?</h2>
-		<div class="chooseMe">
-		  <?php while( has_sub_field('why_choose_me') ): ?>
-		    <div class="icon2Blurb">
-		      <p><?php the_sub_field('icon2_blurb'); ?></p>
-		      <img src="<?php the_sub_field('icon2'); ?>">
-		    </div>
-		  <?php endwhile; ?>
-		</div>
-	</section>
-
-
 <!-- //blog section -->
-	<section class="blogPosts">
-		<h2>Blog</h2>
-		<div class="blog">
-		  <?php while( has_sub_field('blog_posts') ): ?>
-		    <div class="postBlogs">
-		      <img src="<?php the_sub_field('blog_post_image'); ?>">
-		      <p><?php the_sub_field('blog_title'); ?></p>
-		      <p><?php the_sub_field('blog_date'); ?></p>
+<section class="blogPosts" id="blogs">
+	<h2>Blog</h2>
+	<div class="blog">
+	<div class="posts">
+		 <?php while( has_sub_field('blog_posts') ): ?>
+		   <div class="postBlogs">
+		     <img src="<?php the_sub_field('blog_post_image'); ?>">
+		     <p><?php the_sub_field('blog_title'); ?></p>
+		     <p><?php the_sub_field('blog_date'); ?></p>
 		      
-		    </div>
-		  <?php endwhile; ?>
+		   </div>
+		 <?php endwhile; ?>
 		</div>
-	</section>
+	</div>
+</section>
 
+<!-- //contact form -->
 <section class="contactForm">
-	<?php the_field('contact_form') ?>
+<!-- 	<?php the_field('contact_form') ?> -->
 </section>
 
       <?php endwhile; // end the loop?>

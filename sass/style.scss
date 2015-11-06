@@ -25,7 +25,7 @@ $bodyFont: 'Roboto Slab', serif;
 
 // COLORS
 
-$lightblue: #D7EDF0;
+$lightblue: rgb(215,237,240);
 $grey: #8D8989;
 $textcolor: rgb(137, 192, 207);
 $darkblue: rgb(74, 137, 158);
@@ -75,18 +75,26 @@ h1{
 
 .ellyLogo{
 	margin-top: 2%;
+	max-width: 20%;
+
+}
+
+.ellyLogo img{
+	height: 70px;
+	width: 100px;
+	padding-left: 30px;
 }
 
 nav{
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: space-between;
+	
 }
 
 .nav ul{
-	padding-top: 10%;
-	padding-left: 400px;
-
-	
+	padding-top: 5%;
+	// padding-left: 400px;
 }
 
 // .nav{
@@ -96,15 +104,45 @@ nav{
 
 .container h1{
 	padding-top: 5px;
-}
+}	
 
-.content {
+// .content {
+// 	width: 100%;
+// 	padding-bottom: 10%;
+// 	background: url(images/header_bg_03.png) center;
+// 	height: 80vh;
+// 	background-size: cover;
+// }
+
+// .content{
+// 	width: 100%;
+// 	padding-bottom: 10%;
+//   	background-image: url(images/header_bg_03.png), url(images/portfolioHeaderImage4.jpeg);
+//   	background: 
+//   	background-blend-mode: multiply;
+//   	height: 80vh;
+//   	background-size: cover;
+// }
+
+.content{
 	width: 100%;
 	padding-bottom: 10%;
-	background: url(images/header_bg_03.png) center;
-	height: 80vh;
-	background-size: cover;
+  	background-image: url(images/header_bg_03.png), url(images/PortfolioHeaderImageGirl.jpg);
+  	background-color: $lightblue;
+  	background-blend-mode: darken;
+  	height: 100vh;
+  	background-size: cover;
 }
+
+// .content{
+// 	width: 100%;
+// 	padding-bottom: 10%;
+//   	background-image: url(images/header_bg_03.png), url(images/portfolioHeaderImageCar.jpeg);
+//   	// background-color: $lightblue;
+//   	background-blend-mode: lighten;
+//   	height: 80vh;
+//   	background-size: cover;
+// }
 
 .content p{
 	margin-top: 5%;
@@ -115,15 +153,15 @@ nav{
 .aboutContainer{
 	width: 100%;
 	padding-bottom: 1%;
-	padding-top: 5%;
+	padding-top: 1%;
 	height: 60vh;
 }
 
 .aboutMe{
 	display: flex;
 	flex-wrap: wrap;
-	width: 100%;
-	padding-bottom: 5%;
+	width: 80%;
+	margin: 0 auto;
 }
 
 .ellyImage{
@@ -142,14 +180,14 @@ h2.ellyAbout{
 .servicesContainer{
 	width: 100%;
 	padding-bottom: 1%;
-	padding-top: 5%;
+	padding-top: 1%;
 	background: url(images/service_bg.png) center;
-	height: 60vh;
+	height: 50vh;
 	background-size: cover;
 }
 
 .marketingServices{
-	width: 80%;
+	width: 70%;
 	margin: 0 auto;
 }
 
@@ -160,8 +198,8 @@ h2.ellyAbout{
 	align-items: center;
 }
 	
-.mktgServicesBlurb{
-	padding: 2%;
+.mktgServicesBlurb p{
+	color: $grey;
 }
 
 .mktgServicesBlurb img{
@@ -209,53 +247,81 @@ h2.ellyAbout{
 	margin: 0 auto;
 }
 
-//featured work
+.techSkillsIcon img{
+	height: 50px;
+	width: 50px;
+}
+
+//Portfolio Featured Work
+
+.portfolioContainer{
+	width: 100%;
+	background: url(images/lines.png);
+	padding-bottom: 1%;
+	padding-top: 2%;
+}
 
 .portfolio{
 	width: 100%;
+	margin: 0 auto;
 }
 
-.portfolioPieces{
+.portfolioItems{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+}
+	
+.portItems{
+	padding: 2%;
+	width: 33%;
+}
+
+.portItems img{
+	height: 300px;
+	width: 400px;
+}
+
+
+//blog section
+
+.blog{
+	width: 80%;
+	margin: 0 auto;
+}
+
+.blog img{
+	height: 260px;
+	width: 300px;
+}
+
+.posts{
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
 	align-items: center;
 }
 
-//why choose me
-
-//blog section
-
-.blog{
-	width: 90%;
-}
-
-.blog img{
-	height: 280px;
-	width: 300px;
-}
-
-.postBlogs{
-	display: flex;
-	flex-wrap: wrap;
-	width: 20%;
-}
-
 //contact form
 
+//footer
 
+footer{
+	padding: 10%;	
+}
+.footerLogo img{
+	height: 40px;
+	width: 40px;
+}
 
-
-
-
-
-
-
-
-
-
-
-
+.socialMediaIcons{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space between;
+	align-items: center;
+	width: 60%;
+}
 
 
 
