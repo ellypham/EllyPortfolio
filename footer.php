@@ -6,10 +6,12 @@
   	<div class="footerCopy">
   		<p>50% of funds from services will be donated to the 100 Smiles Project, a non-for profit organization which helps orphanages in Central America.  100% of these donated funds will go directly to the proejcts.</p>
   	<div class="socialMediaIcons">
-  		<p>Facebook</p>
-  		<p>Github</p>
-  		<p>Twitter</p>
-  		<p>email</p>
+  		<ul>
+  			<li>Facebook</li>
+  			<li>Github</li>
+  			<li>Twitter</li>
+  			<li>email</li>
+  		</ul>
   	</div>
     <p>&copy; Made with by Elly Pham. All rights reserved. <?php echo date('2015'); ?></p>
   </div>

@@ -15,11 +15,14 @@
 
 <!-- //About Me Section -->
 <section class="aboutContainer" id="about">
-	<div class="imgBackground"></div>
-	<h2 class="ellyAbout">About Me</h2>
+	
+	
+	
+		<h2 class="ellyAbout">About Me</h2>
 	<div class="aboutMe">
+		<div class="imgBackground"></div>
 		<div class="ellyImage">
-		<?php the_post_thumbnail(medium); ?>
+			<?php the_post_thumbnail(medium); ?>
 		</div>
 		<p><?php the_field('biography'); ?></p>
 	</div>
@@ -68,7 +71,7 @@
 
 <!-- //Portfolio Featured Work -->
 
-<section class="portfolioContainer" id="services">
+<section class="portfolioContainer" id="portfolio">
 	<h2>Portfolio</h2>
 	<div class="portfolio">
 		<div class="portfolioItems">
@@ -102,7 +105,7 @@
 
 <!-- //contact form -->
 <section class="contactForm">
-<!-- 	<?php the_field('contact_form') ?> -->
+	<?php the_field('contact_form') ?> 
 </section>
 
       <?php endwhile; // end the loop?>
