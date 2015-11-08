@@ -240,7 +240,6 @@ function clean_stuff_up() {
 
 add_action('init', 'clean_stuff_up');
 
-
 /* Here are some utility helper functions for use in your templates! */
 
 /* pre_r() - makes for easy debugging. <?php pre_r($post); ?> */
@@ -266,3 +265,8 @@ function get_post_parent($post) {
 		return $post->ID;
 	}
 }
+
+// add animate css functions to theme
+function paukai_2011_styles() { wp_register_style( 'animate-css', get_template_directory_uri() . '/animate.min.css', array(), '20120725', 'screen' ); wp_enqueue_style( 'animate-css' ); } add_action('wp_enqueue_scripts', 'paukai_2011_styles');
+
+

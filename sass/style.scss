@@ -60,6 +60,9 @@ h1{
 	color: black;
 }
 
+// img{
+// 	max-width: 100%;
+// }
 
 // .container {
 // 	max-width: 100%;
@@ -97,8 +100,6 @@ nav{
 	padding: 0;
 	margin: 0;
 	z-index: 10;
-
-	
 }
 
 .nav ul{
@@ -114,11 +115,6 @@ nav li a:hover{
 	background: $yellow;
 	text-decoration: underline;
 }
-
-// .nav{
-// 	padding-left: 55%;
-// 	padding-top: 0;
-// }
 
 .container h1{
 	padding-top: 20px;
@@ -141,7 +137,17 @@ nav li a:hover{
 	font-size: 4rem;
 	color: black;
 
-}
+}	
+
+// .fadeIn{
+// 	animation-duration: 20s;
+// }
+
+.duration5 { -webkit-animation-duration: 5s !important; -moz-animation-duration: 5s !important; -ms-animation-duration: 5s !important; -o-animation-duration: 5s !important; }
+
+// .slideInLeft{
+// 	animation-duration: 20s;
+// }
 
 .content ul.titleBio{
 	font-weight: 500;
@@ -166,7 +172,7 @@ ul.titleBio{
 	width: 100%;
 	padding-bottom: 1%;
 	padding-top: 1%;
-	height: 40vh;
+	height: 50vh;
 	// position: relative;
 }
 
@@ -194,7 +200,7 @@ ul.titleBio{
 }
 
 .aboutMe p{
-	width: 65%;
+	max-width: 65%;
 }
 
 h2.ellyAbout{
@@ -228,8 +234,7 @@ h2.ellyAbout{
 }
 
 .mktgServicesBlurb img{
-	height: 60px;
-	width: 60px;
+	width: 20%;
 }
 
 
@@ -273,8 +278,9 @@ h2.ellyAbout{
 }
 
 .techSkillsIcon img{
-	height: 50px;
-	width: 50px;
+	// height: 50px;
+	// width: 50px;
+	width: 100%;
 }
 
 //Portfolio Featured Work
@@ -294,7 +300,6 @@ h2.ellyAbout{
 .portfolioItems{
 	display: flex;
 	flex-wrap: wrap;
-	// justify-content: space-between;
 	align-items: center;
 }
 	
@@ -305,40 +310,61 @@ h2.ellyAbout{
 }
 
 .portItems img{
-	height: 300px;
-	width: 400px;
+	position: relative;
+	width: 100%;
 }
 
 .portItems h3{
 	position: absolute;
-	top: 20%;
-	left:40%;
+	top: 50%;
+	left:50%;
 	color: white;
 	text-transform: uppercase;
+	z-index: 999;
 }
 
+.overlay{
+	color: white;
+	background: rgba(0,0,0,0.5);
+	position:absolute;
+	top: 40px;
+	left: 125px;
+	height: 300px;
+	width: 400px;
+}
 
 
 //blog section
 
-.blog{
-	margin: 0;
-	padding: 0;
-	width: 70%;
-	margin: 0 auto;
+.blogPosts{
+	width: 100%;
+	padding-bottom: 1%;
+	padding-top: 2%;
 }
 
-.blog img{
-	height: 260px;
-	width: 300px;
-	border: 10px solid rgba(139,139,139,0.7);
+.blog{
+	width: 100%;
+	margin: 0 auto;
 }
 
 .posts{
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
 	align-items: center;
+}
+	
+.postBlogs{
+	padding: 2%;
+	width: 33%;
+	position: relative;
+}
+
+.postBlogs img{
+	// height: 300px;
+	// width: 400px;
+	// position: relative;
+	width: 100%;
+	border: 8px solid $grey;
 }
 
 
@@ -347,28 +373,33 @@ h2.ellyAbout{
 //footer
 
 footer{
-	padding: 10%;	
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	margin: 0 auto	
 }
 .footerLogo img{
 	height: 40px;
 	width: 40px;
 }
 
-.socialMediaIcons{
-	width: 100%;
-	margin: 0 auto;
-}
+// .socialMediaIcons{
+// 	width: 100%;
+// 	margin: 0 auto;
+// }
 
 .socialMediaIcons ul{
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space between;
-	align-items: center;
 	list-style: none;
-	max-width: 50%;
-	// margin-left: 40%;
+	align-items: center;
+	// margin-left: 35%;
 }
 
+.socialMediaIcons p{
+	font-size: 3rem;
+}
 
 
 .full {

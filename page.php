@@ -7,8 +7,8 @@
     <?php get_header();  ?>
       <?php // Start the loop ?>
       <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-     <h1>I Am Elly Pham...</h1>
-     <ul class="titleBio">
+     <h1 class="animated duration5 fadeIn">I Am Elly Pham...</h1>
+     <ul class="titleBio animated slideInLeft">
      	<li>Front-End Developer</li>
      	<li>Digital Marketer</li>
      	<li>Philanthropist</li>
@@ -83,7 +83,7 @@
 		    <div class="portItems">
 		      <h3><?php the_sub_field('portfolio_title'); ?></h3>
 		      <img src="<?php the_sub_field('portfolio_image'); ?>">
-
+		      <!-- <div class="overlay"></div> -->
 		    </div>
 		  <?php endwhile; ?>
 		</div>
@@ -91,7 +91,7 @@
 </section>
 
 <!-- //blog section -->
-<section class="blogPosts" id="blogs">
+<section class="blogPosts" id="blog">
 	<h2>Blog</h2>
 	<div class="blog">
 	<div class="posts">
