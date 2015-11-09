@@ -7,23 +7,18 @@
     <?php get_header();  ?>
       <?php // Start the loop ?>
       <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-     <h1 class="animated duration5 fadeIn">I Am Elly Pham...</h1>
-     <ul class="titleBio animated slideInLeft">
-     	<li>Front-End Developer</li>
-     	<li>Digital Marketer</li>
-     	<li>Philanthropist</li>
-     </ul>
-     
+     <h1 class="animated duration4 fadeIn">Elly Pham</h1>
+     <h2 class="animated duration4 slideInLeft">Front-End Developer & Digital Marketer</h2>
+     <div class="chevronDown">
+     	<a data-scroll href="#about"><i class="fa fa-chevron-down fa-2x"></i></a>
+     </div>
     </div> <!-- /,content -->
 
 
 <!-- //About Me Section -->
 <section class="aboutContainer" id="about">
-	
-	
-	
 		<h2 class="ellyAbout">About Me</h2>
-	<div class="aboutMe">
+	<div class="aboutMe wow zoomIn">
 		<div class="imgBackground"></div>
 		<div class="ellyImage">
 			<?php the_post_thumbnail(medium); ?>
@@ -83,11 +78,42 @@
 		    <div class="portItems">
 		      <h3><?php the_sub_field('portfolio_title'); ?></h3>
 		      <img src="<?php the_sub_field('portfolio_image'); ?>">
-		      <!-- <div class="overlay"></div> -->
+		      <div class="overlay"></div>
 		    </div>
 		  <?php endwhile; ?>
 		</div>
 	</div>
+</section>
+
+<!-- //Portfolio Flickity -->
+<!-- //featured work -->
+
+<section class='portfolio' id="portfolio">
+<h2>Portfolio</h2>
+    <?php $portfolioQuery = new WP_query(
+      array(
+        'post_type'=>'portfolio',
+        'orderby'=>'title',
+        'order'=>'DESC'
+        )
+    ); ?>
+
+    <?php if($portfolioQuery->have_posts()): ?>
+      <?php while($portfolioQuery->have_posts()): $portfolioQuery->the_post(); ?>
+        <!-- //stuff goes here -->
+
+        <div class ="portfolioPieces">
+        	<div class="portfolioImg"><?php the_post_thumbnail(extra_large); ?></div>
+			<div class="portfolioCopy">
+        		<div class="portfolioTitle"><?php the_title(); ?><div>
+        		<p><?php the_field(portfolio_short_description) ?></p>
+			</div>
+        </div> 
+
+
+      <?php endwhile ?>
+      <?php wp_reset_postdata(); ?>
+    <?php endif; ?>
 </section>
 
 <!-- //blog section -->
@@ -108,8 +134,19 @@
 </section>
 
 <!-- //contact form -->
-<section class="contactForm">
-	<?php the_field('contact_form') ?> 
+<section class="contactFromContainer" id="contact">
+	<div class="contactForm">
+	<h2>Contact Me</h2>
+		<?php the_field('contact_form') ?> 
+	</div>
+	<div class="socialMediaIcons">
+	<h2>Keep in touch</h2>
+		<ul>
+  			<li>Twitter</li>
+  			<li>Github</li>
+  			<li>Email</li>
+  		</ul>
+  	</div>
 </section>
 
       <?php endwhile; // end the loop?>

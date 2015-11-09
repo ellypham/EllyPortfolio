@@ -27,6 +27,7 @@ $bodyFont: 'Roboto Slab', serif;
 
 $lightblue: rgb(215,237,240);
 $grey: #8D8989;
+$darkgrey: #4A4242;
 $yellow: #FFF794;
 $textcolor: rgb(137, 192, 207);
 $darkblue: rgb(74, 137, 158);
@@ -57,7 +58,7 @@ header{
 // }
 
 h1{
-	color: black;
+	color: $darkgrey;
 }
 
 // img{
@@ -85,7 +86,7 @@ h1{
 
 .ellyLogo img{
 	height: 50px;
-	width: 70px;
+	width: 50px;
 	margin-left: 100px;
 	margin-bottom: 10px;
 }
@@ -108,7 +109,11 @@ nav{
 }
 
 .nav li{
-	display: inline-block
+	display: inline-block;
+}
+
+nav li{
+	color: $grey;
 }
 
 nav li a:hover{
@@ -128,43 +133,45 @@ nav li a:hover{
   	background-blend-mode: darken;
   	height: 100vh;
   	background-size: cover;
+  	margin: 0 auto;
 }
 
 .content h1{
-	padding-top: 6%;
+	padding-top: 4%;
+	margin-bottom: 1%;
 	font-weight: 700;
 	font-family: $bodyFont;
 	font-size: 4rem;
-	color: black;
+	color: $darkgrey;
+}
+	
+.content h2{
+	padding: 0;
+	margin:0;
+	font-weight: 400;
+}
 
-}	
+.chevronDown{
+	padding-top: 8%;
+}
 
-// .fadeIn{
-// 	animation-duration: 20s;
-// }
-
-.duration5 { -webkit-animation-duration: 5s !important; -moz-animation-duration: 5s !important; -ms-animation-duration: 5s !important; -o-animation-duration: 5s !important; }
-
-// .slideInLeft{
-// 	animation-duration: 20s;
-// }
-
-.content ul.titleBio{
-	font-weight: 500;
-	font-family: $titleFont; 
-	font-size: 2rem;
+.chevronDown a{	
 	color: $grey;
-	// list-style: none;
-
 }
 
-ul.titleBio{
-	text-align: left;
-	max-width: 50%;
-	margin: 0 auto;
-	margin-right: 5%;
-
-}
+.socialIcons{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	padding-left: 45%;
+	padding-right: 45%;
+	padding-top: 2%;
+	list-style: none;
+}	
+	
+.duration4 { -webkit-animation-duration: 4s !important; -moz-animation-duration: 4s !important; -ms-animation-duration: 4s !important; -o-animation-duration: 4s !important; }
 
 //about me
 
@@ -201,10 +208,12 @@ ul.titleBio{
 
 .aboutMe p{
 	max-width: 65%;
+	font-weight: 300;
 }
 
 h2.ellyAbout{
 	margin-top: 30px;
+	color: $darkgrey;
 }
 
 //services
@@ -215,6 +224,10 @@ h2.ellyAbout{
 	background: url(images/service_bg.png) center;
 	height: 40vh;
 	background-size: cover;
+}
+
+.servicesContainer h2{
+	color: $darkgrey;
 }
 
 .marketingServices{
@@ -240,10 +253,14 @@ h2.ellyAbout{
 
 //marketing skills
 
-.marketingKills{
-	width: 100%;
-	background: white;
-	height: 60vh;
+// .marketingSkills{
+// 	width: 100%;
+// 	background: white;
+// 	height: 60vh;
+// }
+
+.marketingSkills h2{
+	color: $darkgrey;
 }
 
 .mktSkills{
@@ -280,7 +297,7 @@ h2.ellyAbout{
 .techSkillsIcon img{
 	// height: 50px;
 	// width: 50px;
-	width: 100%;
+	width: 120%;
 }
 
 //Portfolio Featured Work
@@ -290,6 +307,10 @@ h2.ellyAbout{
 	background: url(images/lines.png);
 	padding-bottom: 1%;
 	padding-top: 2%;
+}
+
+.portfolioContainer h2{
+	color: $darkgrey;
 }
 
 .portfolio{
@@ -312,12 +333,13 @@ h2.ellyAbout{
 .portItems img{
 	position: relative;
 	width: 100%;
+
 }
 
 .portItems h3{
 	position: absolute;
-	top: 50%;
-	left:50%;
+	top: 22%;
+	left:22%;
 	color: white;
 	text-transform: uppercase;
 	z-index: 999;
@@ -327,19 +349,49 @@ h2.ellyAbout{
 	color: white;
 	background: rgba(0,0,0,0.5);
 	position:absolute;
-	top: 40px;
-	left: 125px;
-	height: 300px;
-	width: 400px;
+	top: 7%;
+	left: 6.5%;
+	height: 85%;
+	width: 87%;
+}	
+
+// /Portfolio Flickity
+
+// .portfolioContainer{
+// 	width: 100%;
+// 	background: url(images/lines.png);
+// 	padding-bottom: 1%;
+// 	padding-top: 2%;
+// }
+
+.portfolio{
+	width: 100%;
+	margin: 0 auto;
 }
 
+.portfolio h2{
+	color: $darkgrey;
+}
+
+.portfolioPieces{
+	display: flex;
+	flex-wrap: wrap;
+	// align-items: center;
+}
+	
+// .portfolioImg{
+	// padding-left: 5%;
 
 //blog section
-
+	
 .blogPosts{
 	width: 100%;
 	padding-bottom: 1%;
 	padding-top: 2%;
+}
+
+.blogPosts h2{
+	color: $darkgrey;
 }
 
 .blog{
@@ -370,10 +422,37 @@ h2.ellyAbout{
 
 //contact form
 
+.contactFromContainer{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+.contactForm{
+	background: $lightblue;
+	padding-top: 1%;
+	padding-bottom: 1%;
+	width: 50%;
+}
+
+.contactForm h2{
+	color: $darkgrey;
+}
+
+.socialMediaIcons{
+	width: 30%;
+	margin: 0 auto;
+	font-size: 1rem;
+}
+
+.socialMediaIcons ul{
+	list-style: none;
+}
+
 //footer
 
 footer{
-	padding: 0;
+	padding-top:2%;
 	margin: 0;
 	width: 100%;
 	margin: 0 auto	
@@ -383,22 +462,8 @@ footer{
 	width: 40px;
 }
 
-// .socialMediaIcons{
-// 	width: 100%;
-// 	margin: 0 auto;
-// }
-
-.socialMediaIcons ul{
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space between;
-	list-style: none;
-	align-items: center;
-	// margin-left: 35%;
-}
-
-.socialMediaIcons p{
-	font-size: 3rem;
+.footerCopy p{
+	font-size: 1rem;
 }
 
 

@@ -8,8 +8,9 @@
   <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
   <link href='https://fonts.googleapis.com/css?family=Noto+Sans:400,700|Roboto+Slab:400,300' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="flickity.css" media="screen">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   <script src="flickity.pkgd.min.js"></script>
-  <!-- <link rel="stylesheet" href="animate.css"> -->
+  <link rel="stylesheet" href="animate.css">
 
   <?php // Load our CSS ?>
   <link rel="stylesheet" type="text/css" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
@@ -21,7 +22,7 @@
 
 <header>
 
-<nav class="animated slideInDown">
+<nav class="animated duration6 slideInDown">
   <div class="ellyLogo">  
     <img src="<?php bloginfo('template_url') ?>/images/elly_logo_noBG2.png" alt="shape logo">
   </div>

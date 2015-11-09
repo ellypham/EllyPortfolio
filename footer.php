@@ -5,14 +5,11 @@
   	</div>
   	<div class="footerCopy">
   		<p>50% of funds from services will be donated to the 100 Smiles Project, a non-for profit organization which helps orphanages in Central America.  100% of these donated funds will go directly to the proejcts.</p>
-  	<div class="socialMediaIcons">
-  		<ul>
-  			<li>Facebook</li>
-  			<li>Github</li>
-  			<li>Twitter</li>
-  			<li>email</li>
-  		</ul>
-  	</div>
+      <ul class="socialIcons animated duration4 slideInUp">
+        <li><i class="fa fa-twitter"></i></li>
+        <li><i class="fa fa-github"></i></li>
+        <li><i class="fa fa-envelope"></i></li>
+      </ul>
     <p>&copy; Made with by Elly Pham. All rights reserved. <?php echo date('2015'); ?></p>
   </div>
 </footer>
@@ -29,9 +26,7 @@
 <script src="main.min.js"></script>
 <script src="smooth-scroll.js"></script>
  <script src="js/wow.min.js"></script>
-              <script>
-              new WOW().init();
-              </script>
+             
 
 <?php wp_footer(); ?>
 </body>
