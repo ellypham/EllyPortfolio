@@ -47,18 +47,19 @@ function hackeryou_scripts() {
 
 	//Don't use WordPress' local copy of jquery, load our own version from a CDN instead
 	wp_deregister_script('jquery');
+  
   wp_enqueue_script(
-  	'jquery',
-  	"http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js",
-  	false, //dependencies
-  	null, //version number
-  	true //load in footer
+    'jquery', //handle
+    'https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js', //source
+    false, //dependencies
+    null, // version number
+    true //load in footer
   );
 
   wp_enqueue_script(
     'plugins', //handle
     get_template_directory_uri() . '/js/plugins.js', //source
-    false, //dependencies
+    array('jquery'), //dependencies
     null, // version number
     true //load in footer
   );
@@ -66,7 +67,7 @@ function hackeryou_scripts() {
   wp_enqueue_script(
     'scripts', //handle
     get_template_directory_uri() . '/js/main.min.js', //source
-    array( 'jquery', 'plugins' ), //dependencies
+    array(  'jquery', 'plugins' ), //dependencies
     null, // version number
     true //load in footer
   );

@@ -22,12 +22,7 @@
  s.parentNode.insertBefore(g,s)}(document,"script"));
 </script>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script src="main.min.js"></script>
-<script src="smooth-scroll.js"></script>
- <script src="js/wow.min.js"></script>
-             
 
 <?php wp_footer(); ?>
-</body>
+</body> 
 </html>

@@ -1,7 +1,7 @@
 $(function(){
 
-	console.log("It's working");
+	new WOW().init();
+	
+	$('a').smoothScroll();
 
 });
-
-new WOW().init;

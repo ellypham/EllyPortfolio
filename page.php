@@ -9,7 +9,7 @@
       <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
      <h1 class="animated duration4 fadeIn">Elly Pham</h1>
      <h2 class="animated duration4 slideInLeft">Front-End Developer & Digital Marketer</h2>
-     <div class="chevronDown">
+     <div class="chevronDown animated duration4 slideInUp">
      	<a data-scroll href="#about"><i class="fa fa-chevron-down fa-2x"></i></a>
      </div>
     </div> <!-- /,content -->
@@ -31,7 +31,7 @@
 
 <section class="servicesContainer" id="services">
 	<h2>Services</h2>
-	<div class="marketingServices">
+	<div class="marketingServices wow slideInUp">
 		<div class="mktgServices">
 		  <?php while( has_sub_field('services') ): ?>
 		    <div class="mktgServicesBlurb">
@@ -45,7 +45,7 @@
   
 
 <!-- //marketing skills -->
-<section class="marketingSkills">
+<section class="marketingSkills wow slideInUp">
 	<h2>Skills</h2>
 	<div class="mktSkills">
 	  <?php while( has_sub_field('marketing_skills') ): ?>
@@ -57,7 +57,7 @@
 </section>
 
 <!-- //technical skills -->
-<section class="technicalSkills">
+<section class="technicalSkills wow slideInUp">
 	<!-- <h2>Technical Skills</h2> -->
 	<div class="techSkills">
 	  <?php while( has_sub_field('technical_skills') ): ?>
@@ -70,26 +70,8 @@
 
 <!-- //Portfolio Featured Work -->
 
-<section class="portfolioContainer" id="portfolio">
-	<h2>Portfolio</h2>
-	<div class="portfolio">
-		<div class="portfolioItems">
-		  <?php while( has_sub_field('portfolio_items') ): ?>
-		    <div class="portItems">
-		      <h3><?php the_sub_field('portfolio_title'); ?></h3>
-		      <img src="<?php the_sub_field('portfolio_image'); ?>">
-		      <div class="overlay"></div>
-		    </div>
-		  <?php endwhile; ?>
-		</div>
-	</div>
-</section>
-
-<!-- //Portfolio Flickity -->
-<!-- //featured work -->
-
 <section class='portfolio' id="portfolio">
-<h2>Portfolio</h2>
+	<h2>Portfolio</h2>
     <?php $portfolioQuery = new WP_query(
       array(
         'post_type'=>'portfolio',
@@ -102,10 +84,10 @@
       <?php while($portfolioQuery->have_posts()): $portfolioQuery->the_post(); ?>
         <!-- //stuff goes here -->
 
-        <div class ="portfolioPieces">
-        	<div class="portfolioImg"><?php the_post_thumbnail(extra_large); ?></div>
+        <div class="portfolioPieces">
+        	<div class="portfolioImg"><?php the_post_thumbnail(large); ?></div>
 			<div class="portfolioCopy">
-        		<div class="portfolioTitle"><?php the_title(); ?><div>
+        		<div class="portfolioTitle"><?php the_title(); ?></div>
         		<p><?php the_field(portfolio_short_description) ?></p>
 			</div>
         </div> 

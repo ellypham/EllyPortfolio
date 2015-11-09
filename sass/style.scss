@@ -45,7 +45,7 @@ body{
 	font-family: $bodyFont;
 	color: $grey;
 	font-weight: 400;
-	@include fontSize(12);
+	@include fontSize(10);
 	text-align: center;
 }
 
@@ -186,15 +186,16 @@ nav li a:hover{
 .aboutMe{
 	display: flex;
 	flex-wrap: wrap;
-	width: 80%;
+	max-width: 100%;
 	margin: 0 auto;
 	position: relative;
 }
 
 .imgBackground{
-	height: 40%;
+	height: 60%;
 	width: 30%;
 	margin-right: 2%;	
+	margin-left: 2%;
 	background: rgba(215,237,240, 0.5);
 	transform: rotate(-10deg);
 }
@@ -202,8 +203,13 @@ nav li a:hover{
 .ellyImage{
 	width: 30%;
 	position: absolute;
-	left: 0;
+	left: 2%;
 	top: 0;
+}
+
+.ellyImage img{
+	max-width: 100%;
+	height: auto;
 }
 
 .aboutMe p{
@@ -233,6 +239,10 @@ h2.ellyAbout{
 .marketingServices{
 	width: 65%;
 	margin: 0 auto;
+}
+
+.zoomInUp{
+	animation-duration: 5s;
 }
 
 .mktgServices{
@@ -302,58 +312,58 @@ h2.ellyAbout{
 
 //Portfolio Featured Work
 
-.portfolioContainer{
-	width: 100%;
-	background: url(images/lines.png);
-	padding-bottom: 1%;
-	padding-top: 2%;
-}
+// .portfolioContainer{
+// 	width: 100%;
+// 	background: url(images/lines.png);
+// 	padding-bottom: 1%;
+// 	padding-top: 2%;
+// }
 
-.portfolioContainer h2{
-	color: $darkgrey;
-}
+// .portfolioContainer h2{
+// 	color: $darkgrey;
+// }
 
-.portfolio{
-	width: 100%;
-	margin: 0 auto;
-}
+// .portfolio{
+// 	width: 100%;
+// 	margin: 0 auto;
+// }
 
-.portfolioItems{
-	display: flex;
-	flex-wrap: wrap;
-	align-items: center;
-}
+// .portfolioItems{
+// 	display: flex;
+// 	flex-wrap: wrap;
+// 	align-items: center;
+// }
 	
-.portItems{
-	padding: 2%;
-	width: 33%;
-	position: relative;
-}
+// .portItems{
+// 	padding: 2%;
+// 	width: 33%;
+// 	position: relative;
+// }
 
-.portItems img{
-	position: relative;
-	width: 100%;
+// .portItems img{
+// 	position: relative;
+// 	width: 100%;
 
-}
+// }
 
-.portItems h3{
-	position: absolute;
-	top: 22%;
-	left:22%;
-	color: white;
-	text-transform: uppercase;
-	z-index: 999;
-}
+// .portItems h3{
+// 	position: absolute;
+// 	top: 22%;
+// 	left:22%;
+// 	color: white;
+// 	text-transform: uppercase;
+// 	z-index: 999;
+// }
 
-.overlay{
-	color: white;
-	background: rgba(0,0,0,0.5);
-	position:absolute;
-	top: 7%;
-	left: 6.5%;
-	height: 85%;
-	width: 87%;
-}	
+// .overlay{
+// 	color: white;
+// 	background: rgba(0,0,0,0.5);
+// 	position:absolute;
+// 	top: 7%;
+// 	left: 6.5%;
+// 	height: 85%;
+// 	width: 87%;
+// }	
 
 // /Portfolio Flickity
 
@@ -365,7 +375,7 @@ h2.ellyAbout{
 // }
 
 .portfolio{
-	width: 100%;
+	width: 70%;
 	margin: 0 auto;
 }
 
@@ -373,14 +383,24 @@ h2.ellyAbout{
 	color: $darkgrey;
 }
 
+.portfolioTitle{
+	background: $lightblue;
+}
+
 .portfolioPieces{
 	display: flex;
 	flex-wrap: wrap;
-	// align-items: center;
+	justify-content: space-between;
+	align-items: center;
 }
 	
-// .portfolioImg{
-	// padding-left: 5%;
+.portfolioImg{
+	width: 50%;
+}
+
+.portfolioCopy{
+	width: 40%;
+}
 
 //blog section
 	
