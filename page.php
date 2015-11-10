@@ -1,6 +1,6 @@
 
 
-<div class="main">
+<div class="main" id="home">
   <div class="container">
 
     <div class="content">
@@ -16,7 +16,6 @@
 
 
 <!-- //About Me Section -->
-
 <section class="aboutContainer close">
 <div class="anchor" id="about"></div>
 		<h2 class="ellyAbout">About Me</h2>
@@ -31,7 +30,8 @@
 
 <!-- //services -->
 
-<section class="servicesContainer close" id="services">
+<section class="servicesContainer close">
+<div class="anchor2" id="services"></div>
 	<h2>Services</h2>
 	<div class="marketingServices wow slideInUp">
 		<div class="mktgServices">
@@ -72,7 +72,8 @@
 
 <!-- //Portfolio Featured Work -->
 
-<section class='portfolioSection close' id="portfolio">
+<section class='portfolioSection close'>
+<div class="anchor3" id="portfolio"></div>
 	<h2>Portfolio</h2>
 	<div class='portfolio'>
     <?php $portfolioQuery = new WP_query(
@@ -108,7 +109,8 @@
 </section>
 
 <!-- //blog section -->
-<section class="blogPosts close" id="blog">
+<section class="blogPosts close">
+<div class="anchor4" id="blog"></div>
 	<h2>Blog</h2>
 	<div class="blog">
 	<div class="posts">
@@ -125,11 +127,12 @@
 </section>
 
 <!-- //contact form -->
-<section class="contactFormContainer close" id="contact">
+<section class="contactFormContainer close">
 	<div class="contactForm">
 	<h2>Contact Me</h2>
 		<?php the_field('contact_form') ?> 
 	</div>
+	<div class="anchor5" id="contact"></div>
 	<div class="givingBack">
 	<h2>Giving Back to 100 Smiles Project</h2>
 	<img src="<?php bloginfo('template_url') ?>/images/100Smiles-full-colour-pink.png" alt="100 smiles project logo">

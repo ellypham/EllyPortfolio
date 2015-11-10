@@ -82,7 +82,6 @@ h2{
 .ellyLogo{
 	padding-top: 1%;
 	max-width: 20%;
-
 }
 
 .ellyLogo img{
@@ -179,10 +178,17 @@ nav li a:hover{
 	padding-top: 2%;
 	height: auto;
 	margin: 0 auto;
+	position: relative;
 }
 
+.anchor{
+	position: absolute;
+	top: -100px;
+}
+
+
 .aboutMe{
-	display: flex;
+	display: flex;	
 	flex-wrap: wrap;
 	max-width: 100%;
 	margin: 0 auto;
@@ -235,6 +241,12 @@ h2.ellyAbout{
 	background: url(images/service_bg.png) center;
 	height: auto;
 	background-size: cover;
+	position: relative;
+}
+
+.anchor2{
+	position: absolute;
+	top: -100px;
 }
 
 .marketingServices{
@@ -307,6 +319,12 @@ h2.ellyAbout{
 	background: $lightgrey;
 	padding-top: 1%;
 	max-width: 100%;
+	position: relative;
+}
+
+.anchor3{
+	position: absolute;
+	top: -100px;
 }
 
 .portfolio{
@@ -365,6 +383,12 @@ h2.ellyAbout{
 	max-width: 100%;
 	padding-bottom: 1%;
 	padding-top: 2%;
+	position: relative;
+}
+
+.anchor4{
+	position: absolute;
+	top: -100px;
 }
 
 .blog{
@@ -401,6 +425,12 @@ h2.ellyAbout{
 	flex-wrap: wrap;
 	align-items: center;
 	background: $lightgrey;
+	position: relative;
+}
+
+.anchor5{
+	position: absolute;
+	top: -100px;
 }
 
 .contactForm{
@@ -408,6 +438,10 @@ h2.ellyAbout{
 	padding-top: 1%;
 	padding-bottom: 1%;
 	width: 50%;
+}
+
+.wpcf7-textarea{
+	border: 1px inset;
 }
 
 .givingBack{
