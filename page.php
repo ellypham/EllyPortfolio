@@ -9,14 +9,16 @@
       <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
      <h1 class="animated duration4 fadeIn">Elly Pham</h1>
      <h2 class="animated duration4 slideInLeft">Front-End Developer & Digital Marketer</h2>
-     <div class="chevronDown animated duration4 slideInUp">
-     	<a data-scroll href="#about"><i class="fa fa-chevron-down fa-2x"></i></a>
+     <div class="chevronDown animated pulse">
+     	<a data-scroll href="#about"><i class="fa fa-angle-double-down fa-5x"></i></a>
      </div>
     </div> <!-- /,content -->
 
 
 <!-- //About Me Section -->
-<section class="aboutContainer" id="about">
+
+<section class="aboutContainer close">
+<div class="anchor" id="about"></div>
 		<h2 class="ellyAbout">About Me</h2>
 	<div class="aboutMe wow zoomIn">
 		<div class="imgBackground"></div>
@@ -29,7 +31,7 @@
 
 <!-- //services -->
 
-<section class="servicesContainer" id="services">
+<section class="servicesContainer close" id="services">
 	<h2>Services</h2>
 	<div class="marketingServices wow slideInUp">
 		<div class="mktgServices">
@@ -45,7 +47,7 @@
   
 
 <!-- //marketing skills -->
-<section class="marketingSkills wow slideInUp">
+<section class="marketingSkills wow slideInUp close">
 	<h2>Skills</h2>
 	<div class="mktSkills">
 	  <?php while( has_sub_field('marketing_skills') ): ?>
@@ -57,7 +59,7 @@
 </section>
 
 <!-- //technical skills -->
-<section class="technicalSkills wow slideInUp">
+<section class="technicalSkills wow slideInUp close">
 	<!-- <h2>Technical Skills</h2> -->
 	<div class="techSkills">
 	  <?php while( has_sub_field('technical_skills') ): ?>
@@ -70,7 +72,7 @@
 
 <!-- //Portfolio Featured Work -->
 
-<section class='portfolioSection' id="portfolio">
+<section class='portfolioSection close' id="portfolio">
 	<h2>Portfolio</h2>
 	<div class='portfolio'>
     <?php $portfolioQuery = new WP_query(
@@ -106,7 +108,7 @@
 </section>
 
 <!-- //blog section -->
-<section class="blogPosts" id="blog">
+<section class="blogPosts close" id="blog">
 	<h2>Blog</h2>
 	<div class="blog">
 	<div class="posts">
@@ -123,14 +125,15 @@
 </section>
 
 <!-- //contact form -->
-<section class="contactFromContainer" id="contact">
+<section class="contactFormContainer close" id="contact">
 	<div class="contactForm">
 	<h2>Contact Me</h2>
 		<?php the_field('contact_form') ?> 
 	</div>
 	<div class="givingBack">
 	<h2>Giving Back to 100 Smiles Project</h2>
-	<img src="<?php bloginfo('template_url') ?>/images/100Smiles-bw.png" alt="100 smiles project logo">
+	<img src="<?php bloginfo('template_url') ?>/images/100Smiles-full-colour-pink.png" alt="100 smiles project logo">
+	<a href="www.100smilesproject.org"><p>www.100smilesproject.org</p></a>
 	<p>50% of funds from my services will be donated to the 100 Smiles Project, a non-for profit organization which helps orphanages in Central America. 100% of these donated funds will go directly to the projects.</p>
   	</div>
 </section>

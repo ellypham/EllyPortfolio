@@ -33,21 +33,14 @@ $darkgrey: #4A4242;
 $yellow: #FFF794;
 $textcolor: rgb(137, 192, 207);
 $darkblue: rgb(74, 137, 158);
-$pink: rgb(255,192,203);
 
 //COMMON STYLES
-
-
-@mixin fontSize($scale) {
-		font-size: $scale * 1px;
-		font-size: ($scale / 10) * 1rem;
-}
 
 body{
 	font-family: $bodyFont;
 	color: $grey;
 	font-weight: 400;
-	@include fontSize(10);
+	font-size: 1rem;
 	text-align: center;
 }
 
@@ -55,12 +48,18 @@ header{
 	padding: 0;
 }
 
-// img {
-// 	max-width: 100%;
-// }
+img {
+	max-width: 100%;
+}
 
 h1{
 	color: $darkgrey;
+	font-family: $titleFont;
+}
+
+h2{
+	color: $darkgrey;
+	font-family: $titleFont;
 }
 
 // img{
@@ -81,7 +80,7 @@ h1{
 }
 
 .ellyLogo{
-	margin-top: 2%;
+	padding-top: 1%;
 	max-width: 20%;
 
 }
@@ -106,7 +105,7 @@ nav{
 }
 
 .nav ul{
-	padding-top: 6%;
+	padding-top: 5%;
 	// padding-left: 400px;
 }
 
@@ -128,21 +127,24 @@ nav li a:hover{
 }	
 
 .content{
-	width: 100%;
+	max-width: 100%;
 	padding-bottom: 10%;
   	background-image: url(images/header_bg_03.png), url(images/PortfolioHeaderImageGirl.jpg);
   	background-color: $lightblue;
   	background-blend-mode: darken;
-  	height: 100vh;
+  	background-size: contain;
+  	background-position: center;
+  	// height: 100vh;
   	background-size: cover;
-  	margin: 0 auto;
+  	// margin: 0 auto;
+
 }
 
 .content h1{
 	padding-top: 4%;
 	margin-bottom: 1%;
-	font-weight: 700;
-	font-family: $bodyFont;
+	font-weight: 500;
+	font-family: $titleFont;
 	font-size: 4rem;
 	color: $darkgrey;
 }
@@ -151,26 +153,32 @@ nav li a:hover{
 	padding: 0;
 	margin:0;
 	font-weight: 400;
+	font-family: $bodyFont;
+	color: $grey;
 }
 
 .chevronDown{
-	padding-top: 8%;
+	padding-top: 20%;
 }
 
 .chevronDown a{	
 	color: $grey;
 }
+
+.pulse {
+  	animation-iteration-count: infinite;
+}
 	
-.duration4 { -webkit-animation-duration: 4s !important; -moz-animation-duration: 4s !important; -ms-animation-duration: 4s !important; -o-animation-duration: 4s !important; }
+.duration4 { -webkit-animation-duration: 2s !important; -moz-animation-duration: 2s !important; -ms-animation-duration: 2s !important; -o-animation-duration: 2s !important; }
 
 //about me
 
 .aboutContainer{
-	width: 100%;
-	padding-bottom: 1%;
-	padding-top: 1%;
-	height: 50vh;
-	// position: relative;
+	max-width: 90%;
+	padding-bottom: 2%;
+	padding-top: 2%;
+	height: auto;
+	margin: 0 auto;
 }
 
 .aboutMe{
@@ -179,55 +187,58 @@ nav li a:hover{
 	max-width: 100%;
 	margin: 0 auto;
 	position: relative;
+	padding-left: 10px;
+	justify-content: space-between;
 }
 
 .imgBackground{
-	height: 60%;
-	width: 30%;
+	height: 200px;
+	width: 300px;
 	margin-right: 2%;	
 	margin-left: 2%;
+	margin-bottom: 50px;
 	background: rgba(215,237,240, 0.5);
 	transform: rotate(-10deg);
+	padding-left: 40px;
 }
 
 .ellyImage{
 	width: 30%;
 	position: absolute;
-	left: 2%;
+	left: 10px;
 	top: 0;
 }
 
 .ellyImage img{
 	max-width: 100%;
 	height: auto;
+	padding-left: 20px;
 }
 
 .aboutMe p{
-	max-width: 65%;
+	max-width: 66%;
 	font-weight: 300;
+	padding-left: 20px;
+	margin-right: 30px;
+	font-size: 1rem;
 }
 
 h2.ellyAbout{
 	margin-top: 30px;
-	color: $darkgrey;
 }
 
 //services
 .servicesContainer{
-	width: 100%;
+	max-width: 100%;
 	padding-bottom: 1%;
 	padding-top: 1%;
 	background: url(images/service_bg.png) center;
-	height: 40vh;
+	height: auto;
 	background-size: cover;
 }
 
-.servicesContainer h2{
-	color: $darkgrey;
-}
-
 .marketingServices{
-	width: 65%;
+	max-width: 80%;
 	margin: 0 auto;
 	padding-top: 1%;
 }
@@ -249,20 +260,7 @@ h2.ellyAbout{
 }
 
 .mktgServicesBlurb img{
-	width: 25%;
-}
-
-
-//marketing skills
-
-// .marketingSkills{
-// 	width: 100%;
-// 	background: white;
-// 	height: 60vh;
-// }
-
-.marketingSkills h2{
-	color: $darkgrey;
+	max-width: 20%;
 }
 
 .mktSkills{
@@ -282,9 +280,10 @@ h2.ellyAbout{
 //technical skills
 
 .technicalSkills{
-	width: 100%;
+	max-width: 100%;
 	background: white;
-	height: 20vh;
+	height: auto;
+	padding-bottom: 2%;
 }
 
 .techSkills{
@@ -297,23 +296,17 @@ h2.ellyAbout{
 }
 
 .techSkillsIcon img{
-	// height: 50px;
-	// width: 50px;
-	width: 120%;
+	height: 40px;
+	width: 40px;
+	// width: 600%;
 }
 
 // /Portfolio Flickity
 
-// .portfolioContainer{
-// 	width: 100%;
-// 	background: url(images/lines.png);
-// 	padding-bottom: 1%;
-// 	padding-top: 2%;
-// }
-
 .portfolioSection{
 	background: $lightgrey;
 	padding-top: 1%;
+	max-width: 100%;
 }
 
 .portfolio{
@@ -323,10 +316,7 @@ h2.ellyAbout{
 	padding-bottom: 20px;
 	margin: 0 auto;
   	counter-increment: gallery-cell;
-}
-
-.portfolioSection h2{
-	color: $darkgrey;
+  	justify-content: space-between;
 }
 
 .portfolioTitle{
@@ -343,7 +333,7 @@ h2.ellyAbout{
 .portfolioPieces{
 	display: flex;
 	flex-wrap: wrap;
-	align-items: center;
+	// align-items: center;
 	width: 	100%;
 }
 	
@@ -355,24 +345,30 @@ h2.ellyAbout{
 	width: 50%;
 }
 
+.portfolioImg img{
+	max-width: 100%;
+	height: auto;
+}
+
+.portfolioImg{
+	max-width: 100%;
+}
+
 .portfolioCopy{
 	width: 40%;
+	text-align: left;
 } 
 
 //blog section
 	
 .blogPosts{
-	width: 100%;
+	max-width: 100%;
 	padding-bottom: 1%;
 	padding-top: 2%;
 }
 
-.blogPosts h2{
-	color: $darkgrey;
-}
-
 .blog{
-	width: 80%;
+	width: 100%;
 	margin: 0 auto;
 	margin-top: 2%;
 }
@@ -393,14 +389,14 @@ h2.ellyAbout{
 	// height: 300px;
 	// width: 400px;
 	// position: relative;
-	width: 100%;
+	max-width: 100%;
 	border: 8px solid $grey;
 }
 
 
 //contact form
 
-.contactFromContainer{
+.contactFormContainer{
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
@@ -414,18 +410,19 @@ h2.ellyAbout{
 	width: 50%;
 }
 
-.contactForm h2{
-	color: $darkgrey;
-}
-
 .givingBack{
-	width: 30%;
+	width: 35%;
 	margin: 0 auto;
 	font-size: 1rem;
 }
 
-.givingBack h2{
-	color:$darkgrey;
+.givingBack a{
+	color: $darkgrey;
+	font-family: $titleFont;
+	font-weight: 500;
+	font-size: 1.4rem;
+	padding: 0;
+	margin: 0;
 }
 
 .givingBack img{
@@ -455,21 +452,226 @@ footer{
 	justify-content: space-between;
 	align-items: center;
 	width: 100%;
-	padding-left: 45%;
-	padding-right: 45%;
+	padding-left: 30%;
+	padding-right: 30%;
 	padding-top: 2%;
 	list-style: none;
 	padding-bottom: 2%;
 }	
 
 .footerCopy i{
-	font-size: 2rem;
+	font-size: 2.2rem;
+}
+
+.footerCopy a{
+	color: $grey;
 }
 
 
 .full {
 	width: 100%;
 }
+
+.fa-bars{
+	display: none;
+}
+
+.flexplicit{
+	display: flex!important;
+}
+
+@media(max-width: 1275px) {
+	.aboutMe p{
+	max-width: 60%;
+	}
+}
+
+@media(max-width: 1070px) {
+	.mktgServicesBlurb{
+	max-width: 15%;
+	}
+	.imgBackground{
+	height: 230px;
+	width: 300px;
+	}
+}
+
+@media(max-width: 1031px){
+	.aboutMe p{
+	max-width: 50%;
+	}
+	.imgBackground{
+	height: 190px;
+	width: 250px;
+	}
+}
+
+@media(max-width: 940px) {
+	.mktgServicesBlurb{
+	max-width: 25%;
+	}
+	.portTechList p{
+	margin: 1px;
+	}
+	.aboutMe p{
+	font-size: 0.8rem; 
+	}
+	.imgBackground{
+	height: 180px;
+	width: 250px;
+	}
+}
+
+@media(max-width: 899px){	
+	.mktSkills{
+	max-width: 70%;
+	}
+	.techSkills{
+	max-width: 70%;
+	}
+}
+
+@media(max-width: 876px){
+	.portfolioCopy{
+	width: 45%;
+	padding-left: 40px;
+	}
+	.portfolioImg{
+	padding-left: 10px;
+	} 
+	.imgBackground{
+	height: 150px;
+	width: 230px;
+	margin-right: 2%;	
+	margin-left: 2%;
+	margin-bottom: 50px;
+	background: rgba(215,237,240, 0.5);
+	transform: rotate(-10deg);
+	padding-left: 40px;
+	}
+}
+
+@media(max-width: 768px){
+	.mktSkills{
+	max-width: 80%;
+	}
+	.mktSkills{
+	max-width: 80%;
+	}
+	.imgBackground{
+	height: 130px;
+	width: 200px;
+	}
+	.portfolioCopy{
+	width: 45%;
+	padding-left: 40px;
+	}
+	.portfolioImg{
+	padding-left: 10px;
+	} 
+	.contactForm{
+	background: $lightblue;
+	padding-top: 1%;
+	padding-bottom: 1%;
+	width: 100%;
+	height: auto;
+	}
+	.givingBack{
+	width: 100%;
+	margin: 0 auto;
+	font-size: 1rem;
+	height: auto;
+	}
+
+	.nav{
+	display: none;
+	position: fixed;
+	top:0;
+	left: 0; 
+	height: 100%;
+	max-width: 100%;
+	background: rgba(255,255,255,0.9);
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	width: 100%
+	}
+
+	.nav ul.menu li{
+		display: block;
+	}
+
+	.nav li a{
+	color: black;
+	font-size: 2.5rem;
+	max-width: 100%;
+	}
+
+	.fa-bars{
+	display: inline-block;
+	padding-right: 30px;
+	padding-top: 10px;
+	cursor: pointer;
+	}
+}
+
+@media(max-width: 677px){
+	.mktSkills{
+	max-width: 100%;
+	}
+	.mktSkills{
+	max-width: 100%;
+	}
+	.aboutMe p{
+	max-width: 50%;
+	}
+	.ellyImage{
+	max-width: 30%;
+	}
+	.imgBackground{
+	height: 100px;
+	width: 180px;
+	}
+
+}
+
+@media(max-width: 643px){
+	.ellyImage img{
+	display: none;
+	}
+	.imgBackground{
+	display: none;
+	}
+	.aboutMe p{
+	max-width: 100%;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

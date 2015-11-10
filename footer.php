@@ -4,11 +4,11 @@
   	</div>
   	<div class="footerCopy">
       <ul class="socialIcons animated duration4 slideInUp">
-        <li><i class="fa fa-twitter"></i></li>
-        <li><i class="fa fa-github"></i></li>
-        <li><i class="fa fa-envelope"></i></li>
+        <li><a href="https://twitter.com/ellypham"><i class="fa fa-twitter"></i></a></li>
+        <li><a href="https://github.com/ellypham"><i class="fa fa-github"></i></a></li>
+        <li><a href="mailto:ellypham@gmail.com"><i class="fa fa-envelope"></i></a></li>
       </ul>
-    <p>&copy; Made with by Elly Pham. All rights reserved. <?php echo date('2015'); ?></p>
+    <p>&copy; Elly Pham <?php echo date('2015'); ?></p>
   </div>
 </footer>
 

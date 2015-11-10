@@ -20,11 +20,11 @@
 <body <?php body_class(); ?>>
 
 <header>
-
-<nav class="animated duration4 slideInDown">
+<nav class="animated duration4 slideInDown close hide" id="home">
   <div class="ellyLogo">  
     <img src="<?php bloginfo('template_url') ?>/images/elly_logo_noBG2.png" alt="shape logo">
   </div>
+  <div class="fa fa-bars fa-2x"></div>
   <div class="nav">
     <?php wp_nav_menu( array(
       'container' => false,
@@ -32,7 +32,6 @@
     )); ?>
   </div>
 </nav>
-
 
   <div class="container">
     <h1>
