@@ -89,6 +89,11 @@
         	<div class="portfolioImg"><?php the_post_thumbnail(large); ?></div>
 			<div class="portfolioCopy">
         		<div class="portfolioTitle"><?php the_title(); ?></div>
+        		<div class="portTechList">
+	  				<?php while( has_sub_field('portfolio_tech') ): ?>
+	  					<p class="port"><?php the_sub_field('port_tech'); ?></p>
+	 				 <?php endwhile; ?>
+					</div>
         		<p><?php the_field(portfolio_short_description) ?></p>
 			</div>
         </div> 
