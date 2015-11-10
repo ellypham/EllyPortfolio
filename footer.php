@@ -1,10 +1,8 @@
 <footer>
   <div class="container">
   	<div class="footerLogo">
-  		<img src="<?php bloginfo('template_url') ?>/images/elly_logo_noBG2.png" alt="shape logo">
   	</div>
   	<div class="footerCopy">
-  		<p>50% of funds from services will be donated to the 100 Smiles Project, a non-for profit organization which helps orphanages in Central America.  100% of these donated funds will go directly to the proejcts.</p>
       <ul class="socialIcons animated duration4 slideInUp">
         <li><i class="fa fa-twitter"></i></li>
         <li><i class="fa fa-github"></i></li>

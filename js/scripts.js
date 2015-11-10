@@ -4,4 +4,6 @@ $(function(){
 	
 	$('a').smoothScroll();
 
+	$('.portfolio').flickity();
+
 });

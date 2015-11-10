@@ -35,8 +35,8 @@
 		<div class="mktgServices">
 		  <?php while( has_sub_field('services') ): ?>
 		    <div class="mktgServicesBlurb">
-		      <p><?php the_sub_field('icon_blurb'); ?></p>
 		      <img src="<?php the_sub_field('icon_image'); ?>">
+		      <p><?php the_sub_field('icon_blurb'); ?></p>
 		    </div>
 		  <?php endwhile; ?>
 		</div>
@@ -70,8 +70,9 @@
 
 <!-- //Portfolio Featured Work -->
 
-<section class='portfolio' id="portfolio">
+<section class='portfolioSection' id="portfolio">
 	<h2>Portfolio</h2>
+	<div class='portfolio'>
     <?php $portfolioQuery = new WP_query(
       array(
         'post_type'=>'portfolio',
@@ -96,6 +97,7 @@
       <?php endwhile ?>
       <?php wp_reset_postdata(); ?>
     <?php endif; ?>
+    </div>
 </section>
 
 <!-- //blog section -->
@@ -121,13 +123,10 @@
 	<h2>Contact Me</h2>
 		<?php the_field('contact_form') ?> 
 	</div>
-	<div class="socialMediaIcons">
-	<h2>Keep in touch</h2>
-		<ul>
-  			<li>Twitter</li>
-  			<li>Github</li>
-  			<li>Email</li>
-  		</ul>
+	<div class="givingBack">
+	<h2>Giving Back to 100 Smiles Project</h2>
+	<img src="<?php bloginfo('template_url') ?>/images/100Smiles-bw.png" alt="100 smiles project logo">
+	<p>50% of funds from my services will be donated to the 100 Smiles Project, a non-for profit organization which helps orphanages in Central America. 100% of these donated funds will go directly to the projects.</p>
   	</div>
 </section>
 
