@@ -119,6 +119,7 @@ nav li{
 nav li a:hover{
 	background: $yellow;
 	text-decoration: underline;
+	transition: all 0.7s;
 }
 
 .container h1{
@@ -252,7 +253,8 @@ h2.ellyAbout{
 .marketingServices{
 	max-width: 80%;
 	margin: 0 auto;
-	padding-top: 1%;
+	padding-top: 3%;
+	padding-bottom: 3%;
 }
 
 .zoomInUp{
@@ -273,6 +275,14 @@ h2.ellyAbout{
 
 .mktgServicesBlurb img{
 	max-width: 20%;
+}
+
+.marketingSkills h2{
+	padding-top: 3%;
+}
+
+.marketingSkills{
+	padding-bottom: 3%;
 }
 
 .mktSkills{
@@ -321,6 +331,7 @@ h2.ellyAbout{
 	padding-bottom: 3%;
 	max-width: 100%;
 	position: relative;
+	height: auto;
 }
 
 .anchor3{
@@ -340,6 +351,7 @@ h2.ellyAbout{
 
 .portfolioTitle{
 	background: $lightblue;
+	font-weight: 400;
 }
 
 .portTechList{
@@ -347,6 +359,8 @@ h2.ellyAbout{
 	flex-wrap: wrap;
 	align-items: left;
 	justify-content: space-between;
+	font-weight: 400;
+	padding: 3px;
 }
 
 .portfolioPieces{
@@ -355,19 +369,36 @@ h2.ellyAbout{
 	// align-items: center;
 	width: 	100%;
 }
+
+.portfolioCopy{
+	font-size: 1rem;
+	font-weight: 300;
+}
 	
 .port{
 	border: 3px solid $lightblue;
 }
 
+.port p{
+	line-height: 1px;
+}
+
+.viewLive{
+	padding-top: 3px;
+}
+
 .viewLive a{
 	color: $grey;
-	border: 3px solid $lightblue;
+	border: 3px solid $grey;
+	background: $lightblue;
+	padding: 5px;
+	font-weight: 400;
 }
 
 .viewLive a:hover{
 	background: $yellow;
 	transition: all 0.5s;
+	color: $darkgrey;
 }
 
 // .viewLive:hover:a{
@@ -396,8 +427,8 @@ h2.ellyAbout{
 	
 .blogPosts{
 	max-width: 100%;
-	padding-bottom: 1%;
-	padding-top: 2%;
+	padding-bottom: 3%;
+	padding-top: 3%;
 	position: relative;
 }
 
@@ -426,9 +457,11 @@ h2.ellyAbout{
 
 .postBlogs a{
 	font-size: 1rem;
-	font-weight: 700;
+	font-weight: 400;
 	color: $grey;	
-	border: 2px solid $lightblue;
+	border: 3px solid $grey;
+	padding: 5px;
+	background: $lightblue;
 }
 
 .postblogs a:hover{
@@ -464,13 +497,21 @@ h2.ellyAbout{
 .contactForm{
 	background: $lightblue;
 	padding-top: 3%;
-	padding-bottom: 1%;
+	padding-bottom: 3%;
 	width: 50%;
 }
 
 .wpcf7-textarea{
 	border: 1px inset;
 }
+
+.wpcf7-submit{
+	border: 3px solid $grey;
+	background: white;
+	color: $grey;
+	font-family: $bodyFont;
+}
+
 
 .givingBack{
 	width: 35%;

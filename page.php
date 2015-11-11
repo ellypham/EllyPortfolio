@@ -50,7 +50,7 @@
 <section class="marketingSkills wow slideInUp close">
 	<h2>Skills</h2>
 	<div class="mktSkills">
-	  <?php while( has_sub_field('marketing_skills') ): ?>
+	  <?php while( has_sub_field() ): ?>
 	    <div class="mktSkillsBlurb">
 	      <p><?php the_sub_field('market_skills'); ?></p>
 	    </div>
@@ -65,6 +65,7 @@
 	  <?php while( has_sub_field('technical_skills') ): ?>
 	    <div class="techSkillsIcon">
 	      <img src="<?php the_sub_field('tech_image'); ?>">
+	      <p><?php the_sub_field('tech_title'); ?></p>
 	    </div>
 	  <?php endwhile; ?>
 	</div>
@@ -98,7 +99,7 @@
 	 				 <?php endwhile; ?>
 					</div>
         		<p><?php the_field(portfolio_short_description) ?></p>
-        		<p class="viewLive"><?php the_field(view_live); ?></p>
+        		<div class="viewLive"><?php the_field(view_live); ?></div>
 
 			</div>
         </div> 
