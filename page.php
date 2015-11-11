@@ -98,6 +98,8 @@
 	 				 <?php endwhile; ?>
 					</div>
         		<p><?php the_field(portfolio_short_description) ?></p>
+        		<p class="viewLive"><?php the_field(view_live); ?></p>
+
 			</div>
         </div> 
 
@@ -118,7 +120,6 @@
 		   <div class="postBlogs">
 		     <img src="<?php the_sub_field('blog_post_image'); ?>">
 		     <p><?php the_sub_field('blog_title'); ?></p>
-		     <p><?php the_sub_field('blog_date'); ?></p>
 		      
 		   </div>
 		 <?php endwhile; ?>
@@ -136,7 +137,7 @@
 	<div class="givingBack">
 	<h2>Giving Back to 100 Smiles Project</h2>
 	<img src="<?php bloginfo('template_url') ?>/images/100Smiles-full-colour-pink.png" alt="100 smiles project logo">
-	<a href="www.100smilesproject.org"><p>www.100smilesproject.org</p></a>
+	<a href="http://www.100smilesproject.org"><p>www.100smilesproject.org</p></a>
 	<p>50% of funds from my services will be donated to the 100 Smiles Project, a non-for profit organization which helps orphanages in Central America. 100% of these donated funds will go directly to the projects.</p>
   	</div>
 </section>
