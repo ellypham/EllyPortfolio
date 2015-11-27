@@ -193,7 +193,7 @@ nav li a:hover{
 	flex-wrap: wrap;
 	max-width: 100%;
 	margin: 0 auto;
-	position: relative;
+	// position: relative;
 	padding-left: 10px;
 	justify-content: space-between;
 }
@@ -213,7 +213,7 @@ nav li a:hover{
 	width: 30%;
 	position: absolute;
 	left: 10px;
-	top: 0;
+	// top: 0;
 }
 
 .ellyImage img{
@@ -223,11 +223,13 @@ nav li a:hover{
 }
 
 .aboutMe p{
-	max-width: 66%;
+	max-width: 60%;
 	font-weight: 300;
 	padding-left: 20px;
 	margin-right: 30px;
 	font-size: 1rem;
+	position: absolute;
+	right: 10px;
 }
 
 h2.ellyAbout{
@@ -250,8 +252,8 @@ h2.ellyAbout{
 	top: -100px;
 }
 
-.marketingServices{
-	max-width: 80%;
+.marketingService{
+	width: 90%;
 	margin: 0 auto;
 	padding-top: 3%;
 	padding-bottom: 3%;
@@ -270,11 +272,15 @@ h2.ellyAbout{
 	
 .mktgServicesBlurb p{
 	color: $grey;
-	padding-top: 3%;
+	// padding-top: 10%;
 }
 
-.mktgServicesBlurb img{
-	max-width: 20%;
+.mktgServicesBlurb{
+	width: 25%;
+}
+
+.mktIcons img {
+	max-width: 15%;
 }
 
 .marketingSkills h2{
@@ -596,9 +602,9 @@ footer{
 }
 
 @media(max-width: 1070px) {
-	.mktgServicesBlurb{
-	max-width: 15%;
-	}
+	// .mktgServicesBlurb{
+	// max-width: 15%;
+	// }
 	.imgBackground{
 	height: 230px;
 	width: 300px;
@@ -616,9 +622,9 @@ footer{
 }
 
 @media(max-width: 940px) {
-	.mktgServicesBlurb{
-	max-width: 25%;
-	}
+	// .mktgServicesBlurb{
+	// max-width: 25%;
+	// }
 	.portTechList p{
 	margin: 1px;
 	}
@@ -752,11 +758,68 @@ footer{
 	.imgBackground{
 	display: none;
 	}
+}
+
+@media(max-width: 377px){
+	.content h1{
+	font-size: 2rem;
+	padding-top: 10%;
+	}
+	.content h2{
+	font-size: 1.2rem;
+	padding-bottom: 5%;
+	}
+	.content i{
+	font-size: 2rem;
+	}
+	.aboutContainer{
+	max-width: 90%;
+	height: 30%;
+	margin: 0 auto;
+	}
 	.aboutMe p{
 	max-width: 100%;
+	font-weight: 300;
+	font-size: 0.5rem;
+	}
+	h2.ellyAbout{
+	margin-top: 5px;
+	}
+	.portfolioCopy{
+	font-size: 0.3rem
+	} 
+	.blogPosts{
+	display: none
+	}
+	.mktgServicesBlurb{
+	font-size: 0.5rem;
+	}
+	.techSkillsIcon p{
+	font-size: 0.5rem;
+	}
+	.techSkillsIcon{
+    width: 25%;
+	}
+	.socialIcons i{
+    font-size: 2rem;
 	}
 }
 
+@media(max-width: 320px){
+	.aboutContainer{
+	max-width: 90%;
+	height: 35%;
+	margin: 0 auto;
+	}
+	.socialIcons i{
+    font-size: 1.5rem;
+	}
+	.fa-bars{
+	display: inline-block;
+	padding-top: 10px;
+	cursor: pointer;
+	}
+}
 
 
 

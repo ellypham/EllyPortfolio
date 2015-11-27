@@ -37,8 +37,11 @@
 		<div class="mktgServices">
 		  <?php while( has_sub_field('services') ): ?>
 		    <div class="mktgServicesBlurb">
-		      <img src="<?php the_sub_field('icon_image'); ?>">
-		      <p><?php the_sub_field('icon_blurb'); ?></p>
+			  <div class="mktIcons">
+		      	<img src="<?php the_sub_field('icon_image'); ?>">
+		      </div>
+		      	<div class="space"></div>
+		      	<p><?php the_sub_field('icon_blurb'); ?></p>
 		    </div>
 		  <?php endwhile; ?>
 		</div>
